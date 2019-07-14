@@ -1,0 +1,59 @@
+{
+	"q1": {
+		"text": "On September 14th 2019 Strong Customer Authentication (SCA) will go into effect in Europe. Card payments will require 3D Secure in order to meet those requirements. Transactions that don't follow the new guidelines may be declined. Click the button below to get started!",
+		"options": [
+			"Does my business need SCA?"
+		],
+		"next": [2]
+	},
+	"q2": {
+		"text": "Is your business based in European Economic Area (EEA)?",
+		"options": [
+			"Yes",
+			"No"
+		],
+		"next": [3, 5]
+
+	},
+	"q3": {
+		"text": "Do you have customers in the European Economic Area (EEA)?",
+		"options": [
+			"Yes",
+			"No"
+		],
+		"next": [4, 8]
+	},
+	"q4": {
+		"text": "Does your business accept cards as payment (credit or debit)?",
+		"options": [
+			"Yes",
+			"No"
+		],
+		"next": [8, 7]
+	},
+	"q5": {
+		"text": "Do you create payments on behalf of a business in the European Economic Area (EEA)?",
+		"options": [
+			"Yes",
+			"No"
+		],
+		"next": [4, 6]
+	},
+	"q6": {
+		"text": "Does the business you create payments on behalf of have customers in the EEA?",
+		"options": [
+			"Yes",
+			"No"
+		],
+		"next": []
+	},
+	"q7": {
+		"text": "You don't need SCA! While this might change in the future you're all set for now!"
+	},
+	"q8": {
+		"text": "You need SCA!"
+	},
+	"q9": {
+		"text": "You probably don't need SCA!"
+	}
+}
