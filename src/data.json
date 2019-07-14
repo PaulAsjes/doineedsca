@@ -7,7 +7,7 @@
 		"next": [2]
 	},
 	"q2": {
-		"text": "Is your business based in European Economic Area (EEA)?",
+		"text": "Is your business based in the European Economic Area (EEA)?",
 		"options": [
 			"Yes",
 			"No"
@@ -21,7 +21,7 @@
 			"Yes",
 			"No"
 		],
-		"next": [4, 8]
+		"next": [4, 7]
 	},
 	"q4": {
 		"text": "Does your business accept cards as payment (credit or debit)?",
@@ -37,7 +37,7 @@
 			"Yes",
 			"No"
 		],
-		"next": [4, 6]
+		"next": [4, 7]
 	},
 	"q6": {
 		"text": "Does the business you create payments on behalf of have customers in the EEA?",

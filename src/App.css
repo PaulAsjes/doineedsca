@@ -10,22 +10,15 @@
   height: 100vh;
 }
 
-.App-logo {
-  height: 80px;
-  margin-left: 15px;
-}
-
 .App-header {
   background-color: white;
   height: 10%;
   padding: 20px;
-  z-index: 10;
-  color: orange;
-}
-
-.App-header a {
-  color: orange;
-  text-decoration: none;
+  color: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
 }
 
 .Container {

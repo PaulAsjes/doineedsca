@@ -10,7 +10,9 @@ class RestartButton extends React.Component<Props> {
   public render() {
     return (
       <div className="Restart" onClick={this.props.onClick}>
-        Restart
+        <div className="Restart-label">
+          Restart
+        </div>
       </div>
     );
   }

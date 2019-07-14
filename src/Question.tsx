@@ -1,5 +1,4 @@
 import *  as React from 'react';
-import { findDOMNode } from 'react-dom';
 import Option from './Option';
 import RestartButton from './RestartButton';
 import './Question.css';
@@ -8,34 +7,11 @@ interface Props {
   options?: Array<string>;
   questionText: string;
   next?: Array<number>;
-  show: boolean;
   optionClickFn(next: number): void;
   restartClickFn(): void;
 }
 
 class Question extends React.Component<Props> {
-
-  public state = {
-    show: this.props.show,
-  };
-
-  public componentWillReceiveProps() {
-    this.setState({
-      show: false,
-    }, () => {
-      // trigger DOM refresh
-      // const node = findDOMNode(this);
-      // if (node) {
-      //   node.clientHeight;
-      // }
-      // findDOMNode(this).clientHeight;
-
-      this.setState({
-        show: true,
-      });
-    });
-  }
-
   public render() {
     const {
       options = [],
@@ -48,12 +24,11 @@ class Question extends React.Component<Props> {
     const isResult = options.length < 1;
 
     return (
-      <div className={`Question ${this.state.show ? 'slideIn' : 'slideOut'}`} >
+      <div className={`Question slideIn`} >
         {isResult ?
           <span>
-            <div>You should drink</div>
             <div className="Result">
-              <a href={`https://www.google.com/search?q=${this.toSearchStr(questionText)}`}>{questionText}</a>
+              {questionText}
             </div>
           </span>
           :
@@ -71,10 +46,6 @@ class Question extends React.Component<Props> {
         }
       </div>
     );
-  }
-
-  private toSearchStr(str: string): string {
-    return str.toLowerCase().replace(' ', '+');
   }
 }
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import data from './data.json';
 import Question from './Question';
 
 interface AppState {
   current: number,
+  questions: Array<JSX.Element>
 }
 
 interface QuestionData {
@@ -17,29 +17,26 @@ interface QuestionData {
 class App extends React.Component {
   public state: AppState = {
     current: 1,
+    questions: [],
   }
 
-  private path: Array<number> = [1];
+  public componentWillMount() {
+    this.setState({
+      questions: this.getQuestions(this.state.current)
+    });
+  }
 
   public render() {
-    const question = this.getQuestion(this.state.current);
-    const options = question ? question.options : [];
-
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />        
+          <div>Do I need SCA?</div>
         </header>
         <div className="Container">
           <div className="Content">
-            <Question
-              options={options}
-              questionText={question.text}
-              next={question.next}
-              show={true}
-              optionClickFn={(next) => this.handleClick(next)}
-              restartClickFn={() => this.restart()}
-            />
+            {this.state.questions.map((question) =>
+              question.key === 'q' + this.state.current ? question : null
+            )}
           </div>
         </div>
       </div>
@@ -48,13 +45,23 @@ class App extends React.Component {
 
   private questionData: { [key: string]: QuestionData } = data;
 
-  private getQuestion(num: number): QuestionData {
-    return this.questionData[`q${num}`];
+  private getQuestions(current: number): Array<JSX.Element> {
+    return Object.keys(this.questionData).map((key, i) => {
+      const question = this.questionData[key];
+      return (
+        <Question
+          key={key}
+          options={question.options}
+          questionText={question.text}
+          next={question.next}
+          optionClickFn={(next) => this.handleClick(next)}
+          restartClickFn={() => this.restart()}
+        />
+      )
+    });
   }
 
   private handleClick(next: number) {
-    this.path.push(next);
-
     this.setState({
       current: next,
     });

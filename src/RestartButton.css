@@ -1,3 +1,16 @@
 .Restart {
   cursor: pointer;
 }
+
+.Restart-label {
+  transition: box-shadow 0.2s;
+
+  border: 1px white solid;
+  border-radius: 5px;
+
+  padding: 0.5em 1em;
+}
+
+.Restart:hover {
+  box-shadow: 3px 3px 5px black;
+}
