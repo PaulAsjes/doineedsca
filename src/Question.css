@@ -20,6 +20,11 @@
   color: blue;
 }
 
+.Links {
+  display: flex;
+  justify-content: space-around;
+}
+
 @keyframes slideIn {
   0% {
     margin-top: -2em;

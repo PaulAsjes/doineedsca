@@ -2,16 +2,18 @@ import React from 'react';
 import './App.css';
 import data from './data.json';
 import Question from './Question';
+import Footer from './Footer';
 
 interface AppState {
-  current: number,
-  questions: Array<JSX.Element>
+  current: number;
+  questions: Array<JSX.Element>;
 }
 
 interface QuestionData {
-  text: string,
-  options?: Array<string>,
-  next?: Array<number>
+  text: string;
+  options?: Array<string>;
+  next?: Array<number>;
+  links?: Array<{text: string, url: string}>;
 }
 
 class App extends React.Component {
@@ -39,6 +41,7 @@ class App extends React.Component {
             )}
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -54,6 +57,7 @@ class App extends React.Component {
           options={question.options}
           questionText={question.text}
           next={question.next}
+          links={question.links}
           optionClickFn={(next) => this.handleClick(next)}
           restartClickFn={() => this.restart()}
         />

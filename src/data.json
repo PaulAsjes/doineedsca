@@ -21,7 +21,7 @@
 			"Yes",
 			"No"
 		],
-		"next": [4, 7]
+		"next": [4, 12]
 	},
 	"q4": {
 		"text": "Does your business accept cards as payment (credit or debit)?",
@@ -48,12 +48,47 @@
 		"next": []
 	},
 	"q7": {
-		"text": "You don't need SCA! While this might change in the future you're all set for now!"
+		"text": "Do you have customers in the European Economic Area (EEA)?",
+		"options": [
+			"Yes",
+			"No"
+		],
+		"next": [9, 12]
 	},
 	"q8": {
-		"text": "You need SCA!"
+		"text": "You need SCA! In order to best prepare, what kind of payments does your business make?",
+		"options": [
+			"One-off payments",
+			"Recurring payments or reusing cards"
+		],
+		"next": [10, 11]
 	},
 	"q9": {
 		"text": "You probably don't need SCA!"
+	},
+	"q10": {
+		"text": "You need SCA! Check out the below links to find a simple solution using Stripe",
+		"links": [
+			{
+				"text": "Stripe Checkout is a one-stop shop for one-off payments",
+				"url": "https://stripe.com/docs/payments/checkout"
+			}
+		]
+	},
+	"q11": {
+		"text": "You need SCA! Check out the below links to find a solution using Stripe",
+		"links": [
+			{
+				"text": "Customize your flow with Payment Intents",
+				"url": "https://stripe.com/docs/payments/payment-intents/quickstart"
+			},
+			{
+				"text": "Use Stripe Billing to for recurring payments",
+				"url": "https://stripe.com/docs/billing/migration/strong-customer-authentication"
+			}
+		]
+	},
+	"q12": {
+		"text": "You don't need SCA! While this might change in the future you're all set for now!"
 	}
 }
