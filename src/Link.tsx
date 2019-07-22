@@ -12,7 +12,7 @@ class Link extends React.Component<LinkProps> {
 
     return (
       <div className="Link">
-        <a target="_blank" href={url}>{text}</a>
+        <a target="_blank" rel="noopener noreferrer" href={url}>{text}</a>
       </div>
     );
   }

@@ -49,7 +49,7 @@ class Question extends React.Component<Props> {
         {
           hasLinks ? (
             <div className="Links">
-              {links.map(({ url, text }) => <Link url={url} text={text}/> )}
+              {links.map(({ url, text }, i) => <Link key={i} url={url} text={text}/> )}
             </div>
           )
           : null

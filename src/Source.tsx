@@ -12,7 +12,7 @@ class Source extends React.Component<SourceProps> {
 
     return (
       <div className="Source">
-        <a target="_blank" href={url}>{text}</a>
+        <a target="_blank" rel="noopener noreferrer" href={url}>{text}</a>
       </div>
     );
   }
