@@ -14,6 +14,7 @@ interface QuestionData {
   options?: Array<string>;
   next?: Array<number>;
   links?: Array<{text: string, url: string}>;
+  source?: {text: string, url: string};
 }
 
 class App extends React.Component {
@@ -58,6 +59,7 @@ class App extends React.Component {
           questionText={question.text}
           next={question.next}
           links={question.links}
+          source={question.source}
           optionClickFn={(next) => this.handleClick(next)}
           restartClickFn={() => this.restart()}
         />

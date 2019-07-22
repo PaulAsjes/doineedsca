@@ -29,7 +29,7 @@
 			"Yes",
 			"No"
 		],
-		"next": [8, 7]
+		"next": [8, 12]
 	},
 	"q5": {
 		"text": "Do you create payments on behalf of a business in the European Economic Area (EEA)?",
@@ -61,10 +61,18 @@
 			"One-off payments",
 			"Recurring payments or reusing cards"
 		],
+		"source": {
+			"text": "Source",
+			"url": "https://stripe.com/en-at/guides/strong-customer-authentication"
+		},
 		"next": [10, 11]
 	},
 	"q9": {
-		"text": "You probably don't need SCA!"
+		"text": "You probably don't need SCA! Businesses based outside the European Economic Area are not going to be severely impacted by SCA, though they may experience elevated rates of declines from European customers.",
+		"source": {
+			"text": "Source",
+			"url": "https://stripe.com/en-at/guides/strong-customer-authentication"
+		}
 	},
 	"q10": {
 		"text": "You need SCA! Check out the below links to find a simple solution using Stripe",
@@ -73,7 +81,11 @@
 				"text": "Stripe Checkout is a one-stop shop for one-off payments",
 				"url": "https://stripe.com/docs/payments/checkout"
 			}
-		]
+		],
+		"source": {
+			"text": "Source",
+			"url": "https://stripe.com/en-at/guides/strong-customer-authentication"
+		}
 	},
 	"q11": {
 		"text": "You need SCA! Check out the below links to find a solution using Stripe",
@@ -83,12 +95,20 @@
 				"url": "https://stripe.com/docs/payments/payment-intents/quickstart"
 			},
 			{
-				"text": "Use Stripe Billing to for recurring payments",
+				"text": "Use Stripe Billing for recurring payments",
 				"url": "https://stripe.com/docs/billing/migration/strong-customer-authentication"
 			}
-		]
+		],
+		"source": {
+			"text": "Source",
+			"url": "https://stripe.com/en-at/guides/strong-customer-authentication"
+		}
 	},
 	"q12": {
-		"text": "You don't need SCA! While this might change in the future you're all set for now!"
+		"text": "You don't need SCA! While this might change in the future you're all set for now!",
+		"source": {
+			"text": "Source",
+			"url": "https://stripe.com/en-at/guides/strong-customer-authentication"
+		}
 	}
 }

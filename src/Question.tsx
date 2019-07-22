@@ -1,14 +1,16 @@
 import *  as React from 'react';
 import Option from './Option';
 import RestartButton from './RestartButton';
-import './Question.css';
 import Link from './Link';
+import Source from './Source';
+import './Question.css';
 
 interface Props {
   options?: Array<string>;
   questionText: string;
   next?: Array<number>;
   links?: Array<{text: string, url: string}>;
+  source?: {text: string, url: string};
   optionClickFn(next: number): void;
   restartClickFn(): void;
 }
@@ -22,6 +24,7 @@ class Question extends React.Component<Props> {
       restartClickFn,
       next = [],
       links = [],
+      source,
     } = this.props;
 
     const isResult = options.length < 1;
@@ -54,6 +57,11 @@ class Question extends React.Component<Props> {
         {
           isResult ?
           <RestartButton onClick={() => restartClickFn()} />
+          : null
+        }
+        {
+          source ?
+          <Source url={source.url} text={source.text} />
           : null
         }
       </div>

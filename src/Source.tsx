@@ -1,21 +1,21 @@
 import * as React from 'react';
-import './Link.css';
+import './Source.css';
 
-interface LinkProps {
+interface SourceProps {
   text: string;
   url: string;
 }
 
-class Link extends React.Component<LinkProps> {
+class Source extends React.Component<SourceProps> {
   public render() {
     const { text, url } = this.props;
 
     return (
-      <div className="Link">
+      <div className="Source">
         <a target="_blank" href={url}>{text}</a>
       </div>
     );
   }
 }
 
-export default Link;
+export default Source;
